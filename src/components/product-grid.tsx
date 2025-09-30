@@ -1,10 +1,10 @@
-import { Link } from "lucide-react"
 import { useState, useMemo } from "react"
 import { ProductCard } from "./product-card"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { products, type Product } from "../data/products"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
+import { Link } from "react-router-dom"
 
 type Props = {
   initialTab?: "all" | "crochet" | "embroidery"
@@ -63,7 +63,7 @@ export function ProductGrid({ initialTab = "all", limit, categoryTag, showViewAl
       {showViewAll && (
         <div className="mt-6 text-center">
           <Button asChild variant="secondary">
-            <Link href="/products">View all products</Link>
+            <Link to="/products">View all products</Link>
           </Button>
         </div>
       )}
